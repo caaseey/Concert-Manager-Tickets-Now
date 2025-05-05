@@ -26,9 +26,6 @@ Este proyecto es una aplicación web sencilla que permite gestionar conciertos m
 
 ---
 
-
----
-
 ## 🧠 Funcionamiento
 
 ### 🔍 Lectura (`lectura.php`)
@@ -55,15 +52,19 @@ Permite modificar los datos de un artista indicando su ID.
 
 ### ❌ Borrar (`borrar.php`)
 Elimina un concierto de la base según el ID.
-
 ---
 
-## ⚙️ Comandos Útiles (BaseX)
+## ⚙️ Comandos Útiles para BaseX
 
-### Crear la base:
+### Crear base de datos desde XML
 ```bash
-basex -c "CREATE DB registros_db path/a/registros.xml"
+basex -c "CREATE DB registros_db /ruta/completa/a/registros.xml"
+```
 
-Exportar la base:
-
+### Exportar base de datos como XML
+```bash
 basex -c "EXPORT registros_db /ruta/de/destino"
+```
+
+> Asegúrate de que BaseX esté ejecutándose en modo servidor (`basexhttp` o `basexserver`) si usas conexiones desde PHP.
+
