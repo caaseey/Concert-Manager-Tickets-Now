@@ -43,7 +43,6 @@ Muestra todos los conciertos en tarjetas, incluyendo:
 Formulario para crear un nuevo artista. Valida:
 - Que todos los campos estén rellenos
 - Que la fecha sea igual o posterior a hoy
-- Que el nombre no esté duplicado
 
 ### 🔎 Filtrar (`filtrar.php`)
 Busca y muestra un concierto por su **ID** exacto.
