@@ -49,7 +49,7 @@ Busca y muestra un concierto por su **ID** exacto.
 
 ### 📝 Actualizar (`actualizar.php`)
 Permite modificar los datos de un artista indicando su ID.  
-⚠️ Solo actualiza los campos que se hayan rellenado.
+- Solo actualiza los campos que se hayan rellenado.
 
 ### ❌ Borrar (`borrar.php`)
 Elimina un concierto de la base según el ID.
