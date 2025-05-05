@@ -15,16 +15,17 @@ Este proyecto es una aplicación web sencilla que permite gestionar conciertos m
 
 ## 📁 Estructura del Proyecto
 
-```
-/BaseXClient/Session.php   # Clase de conexión a BaseX
-/styles.css                # Hoja de estilos CSS compartida
-/index.php                 # Página de menú principal
-/lectura.php               # Muestra todos los conciertos
-/insertar.php              # Añadir nuevo concierto
-/filtrar.php               # Buscar concierto por ID
-/actualizar.php            # Actualizar campos de un concierto por ID
-/borrar.php                # Eliminar concierto por ID
-```
+| Archivo                      | Descripción                                     |
+|-----------------------------|-------------------------------------------------|
+| /BaseXClient/Session.php    | Clase de conexión a BaseX                       |
+| /styles.css                 | Hoja de estilos CSS compartida                 |
+| /index.php                  | Página de menú principal                        |
+| /lectura.php                | Muestra todos los conciertos                    |
+| /insertar.php               | Añadir nuevo concierto                          |
+| /filtrar.php                | Buscar concierto por ID                         |
+| /actualizar.php             | Actualizar campos de un concierto por ID        |
+| /borrar.php                 | Eliminar concierto por ID                       |
+
 
 ---
 
