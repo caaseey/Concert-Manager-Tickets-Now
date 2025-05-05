@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conciertos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="registros.xsd">
+    <!-- K-POP -->
+    <artista>
+        <nombre>BTS</nombre>
+        <genero>K-pop</genero>
+        <miembros>7</miembros>
+        <fecha_concierto>2025-01-01</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>BLACKPINK</nombre>
+        <genero>K-pop</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-01-02</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>BLACKPINK</nombre>
+        <genero>K-pop</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-01-03</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>EXO</nombre>
+        <genero>K-pop</genero>
+        <miembros>9</miembros>
+        <fecha_concierto>2025-01-04</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>TWICE</nombre>
+        <genero>K-pop</genero>
+        <miembros>9</miembros>
+        <fecha_concierto>2025-01-05</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>SEVENTEEN</nombre>
+        <genero>K-pop</genero>
+        <miembros>13</miembros>
+        <fecha_concierto>2025-01-06</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>Stray Kids</nombre>
+        <genero>K-pop</genero>
+        <miembros>8</miembros>
+        <fecha_concierto>2025-01-07</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>NCT 127</nombre>
+        <genero>K-pop</genero>
+        <miembros>10</miembros>
+        <fecha_concierto>2025-01-08</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>NCT Dream</nombre>
+        <genero>K-pop</genero>
+        <miembros>7</miembros>
+        <fecha_concierto>2025-01-09</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>WayV</nombre>
+        <genero>K-pop</genero>
+        <miembros>7</miembros>
+        <fecha_concierto>2025-01-10</fecha_concierto>
+        <pais>China</pais>
+    </artista>
+    <artista>
+        <nombre>ITZY</nombre>
+        <genero>K-pop</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-01-11</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>TXT (TOMORROW X TOGETHER)</nombre>
+        <genero>K-pop</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-01-12</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>ATEEZ</nombre>
+        <genero>K-pop</genero>
+        <miembros>8</miembros>
+        <fecha_concierto>2025-01-13</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>ENHYPEN</nombre>
+        <genero>K-pop</genero>
+        <miembros>7</miembros>
+        <fecha_concierto>2025-01-14</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>Red Velvet</nombre>
+        <genero>K-pop</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-01-15</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>NewJeans</nombre>
+        <genero>K-pop</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-01-16</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>LE SSERAFIM</nombre>
+        <genero>K-pop</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-01-17</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>IVE</nombre>
+        <genero>K-pop</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-01-18</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>(G)I-DLE</nombre>
+        <genero>K-pop</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-01-19</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>STAYC</nombre>
+        <genero>K-pop</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-01-20</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+    <artista>
+        <nombre>SHINee</nombre>
+        <genero>K-pop</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-01-21</fecha_concierto>
+        <pais>Corea del Sur</pais>
+    </artista>
+
+    <!-- RAP / HIP HOP -->
+    <artista>
+        <nombre>Travis Scott</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-22</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Kendrick Lamar</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-23</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Drake</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-24</fecha_concierto>
+        <pais>Canadá</pais>
+    </artista>
+    <artista>
+        <nombre>J. Cole</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-25</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>The Weeknd</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-26</fecha_concierto>
+        <pais>Canadá</pais>
+    </artista>
+    <artista>
+        <nombre>Future</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-27</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Lil Uzi Vert</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-28</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>21 Savage</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-29</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Playboi Carti</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-30</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Lil Baby</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-01-31</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Gunna</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-01</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Metro Boomin</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-02</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>A$AP Rocky</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-03</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Kanye West</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-04</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Kid Cudi</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-05</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Pusha T</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-06</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Meek Mill</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-07</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Cardi B</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-08</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Nicki Minaj</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-09</fecha_concierto>
+        <pais>Trinidad y Tobago</pais>
+    </artista>
+    <artista>
+        <nombre>Ice Spice</nombre>
+        <genero>Rap / Hip-Hop</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-10</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+
+    <!-- M. MEXICANA -->
+    <artista>
+        <nombre>Peso Pluma</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-11</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Natanael Cano</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-12</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Fuerza Regida</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-02-13</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Junior H</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-14</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Christian Nodal</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-15</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Banda MS</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>7</miembros>
+        <fecha_concierto>2025-02-16</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Los Tigres del Norte</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-02-17</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Julión Álvarez</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-18</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Carin León</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-19</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Grupo Firme</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-02-20</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Luis R Conríquez</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-21</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Gerardo Ortiz</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-22</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Los Tucanes de Tijuana</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>5</miembros>
+        <fecha_concierto>2025-02-23</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Edén Muñoz</nombre>
+        <genero>Marca Registrada</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-24</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Chuy Lizárraga</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-25</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Lenin Ramírez</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-26</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>El Fantasma</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-27</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Alfredo Olivas</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-02-28</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+    <artista>
+        <nombre>Codiciado</nombre>
+        <genero>Música Mexicana</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-01</fecha_concierto>
+        <pais>México</pais>
+    </artista>
+
+    <!-- Reggaetón / Música Latina -->
+    <artista>
+        <nombre>Bad Bunny</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-02</fecha_concierto>
+        <pais>Puerto Rico</pais>
+    </artista>
+    <artista>
+        <nombre>Karol G</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-03</fecha_concierto>
+        <pais>Colombia</pais>
+    </artista>
+    <artista>
+        <nombre>J Balvin</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-04</fecha_concierto>
+        <pais>Colombia</pais>
+    </artista>
+    <artista>
+        <nombre>Rauw Alejandro</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-05</fecha_concierto>
+        <pais>Puerto Rico</pais>
+    </artista>
+    <artista>
+        <nombre>Anuel AA</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-06</fecha_concierto>
+        <pais>Puerto Rico</pais>
+    </artista>
+    <artista>
+        <nombre>Myke Towers</nombre>
+        <genero>Reggaetón / Música Latina</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-07</fecha_concierto>
+        <pais>Puerto Rico</pais>
+    </artista>
+
+    <!-- POP / Rock Internacional -->
+    <artista>
+        <nombre>Ed Sheeran</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-08</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>Taylor Swift</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-09</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Coldplay</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-03-10</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>Imagine Dragons</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-03-11</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Linkin Park</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-03-12</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Red Hot Chili Peppers</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-03-13</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Foo Fighters</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>6</miembros>
+        <fecha_concierto>2025-03-14</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Arctic Monkeys</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-03-15</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>The Killers</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>4</miembros>
+        <fecha_concierto>2025-03-16</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Lana Del Rey</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-17</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Olivia Rodrigo</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-18</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Dua Lipa</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-19</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>Sam Smith</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-20</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>Harry Styles</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-21</fecha_concierto>
+        <pais>Reino Unido</pais>
+    </artista>
+    <artista>
+        <nombre>SZA</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-22</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Doja Cat</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-23</fecha_concierto>
+        <pais>USA</pais>
+    </artista>
+    <artista>
+        <nombre>Shawn Mendes</nombre>
+        <genero>Pop / Rock Internacional</genero>
+        <miembros>1</miembros>
+        <fecha_concierto>2025-03-24</fecha_concierto>
+        <pais>Canada</pais>
+    </artista>
+</conciertos>
