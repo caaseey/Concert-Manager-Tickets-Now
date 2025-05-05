@@ -57,19 +57,51 @@ Elimina un concierto de la base según el ID.
 
 ---
 
-## ⚙️ Comandos Útiles para BaseX
+## ⚙️ Configuración de la Base de Datos en BaseX
 
-### Crear base de datos desde XML
+Sigue estos pasos para importar tu base de datos XML y permitir que las páginas PHP se conecten correctamente:
+
+### 1. Iniciar el servidor BaseX
+Asegúrate de que el servidor esté activo. Puedes abrirlo desde terminal o menú:
+
 ```bash
-basex -c "CREATE DB registros_db /ruta/completa/a/registros.xml"
+basexserver
 ```
 
-### Exportar base de datos como XML
+Esto habilita conexiones en `localhost:1984`, necesario para que los scripts PHP funcionen.
+
+---
+
+### 2. Crear la base de datos desde el archivo XML
+
+Ejecuta este comando en terminal para crear la base `registros_db` a partir del archivo XML:
+
 ```bash
-basex -c "EXPORT registros_db /ruta/de/destino"
+basex -c "CREATE DB registros_db C:\xampp\htdocs\TU_PROYECTO\ruta\registros.xml"
 ```
 
-> Asegúrate de que BaseX esté ejecutándose en modo servidor (`basexhttp` o `basexserver`) si usas conexiones desde PHP.
+📌 Cambia la ruta al archivo XML según la ubicación real en tu equipo.
+
+---
+
+### 3. Verificar la base creada
+
+Puedes abrir la GUI de BaseX (`basexgui`) para comprobar que `registros_db` aparece en el listado y contiene los datos correctamente.
+
+---
+
+### 4. Exportar la base de datos (opcional)
+
+Si deseas exportar la base completa como XML a una carpeta:
+
+```bash
+basex -c "EXPORT registros_db C:\ruta\de\destino"
+```
+
+---
+
+✅ **Listo**: Ahora puedes usar los scripts PHP (`insertar.php`, `filtrar.php`, etc.) para interactuar con la base de datos desde tu navegador.
+
 
 basex -c "EXPORT registros_db /ruta/de/destino"
 ```
