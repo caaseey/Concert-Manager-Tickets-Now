@@ -1,5 +1,5 @@
 <?php
-require_once("BaseXClient/Session.php"); // Importamos la clase de conexión con BaseX
+require_once(__DIR__ . "/BaseXClient/Session.php"); // Importamos la clase de conexión con BaseX
 
 // Inicializamos mensaje vacío
 $mensaje = "";
@@ -17,7 +17,7 @@ if (
 
     try {
         // Creamos sesión con BaseX
-        $session = new BaseXClient\Session("localhost", 1984, "admin", "123");
+        $session = new BaseXClient\Session("localhost", 1984, "admin", "1234");
 
         // Sanitizamos y limpiamos los datos de entrada
         $nombre = htmlspecialchars(trim($_POST['nombre']));
@@ -32,26 +32,20 @@ if (
             $mensaje = "La fecha del concierto no puede ser anterior a hoy ($fecha_actual).";
         } else {
             // Consultamos si ya existe un artista con ese nombre
-            $checkQuery = "xquery count(collection('registros_db')/conciertos/artista[nombre = '$nombre'])";
-            $existe = $session->execute($checkQuery);
+            $checkQuery = "count(collection('registros_db')/conciertos/artista[nombre = '$nombre'])";
+            $existe = $session->execute("xquery " . $checkQuery);
 
-            if ((int)$existe > 0) {
-                // Si ya existe, no insertamos y mostramos un aviso
-                $mensaje = "Ya existe un artista con el nombre '$nombre'.";
-            } else {
-                // Si no existe, insertamos el nuevo nodo XML en la colección
-                $xquery = <<<XQ
+            $xquery = <<<XQ
 xquery insert node <artista>
-  <nombre>{$nombre}</nombre>
-  <genero>{$genero}</genero>
-  <miembros>{$miembros}</miembros>
-  <fecha_concierto>{$fecha}</fecha_concierto>
-  <pais>{$pais}</pais>
-</artista> into collection('registros_db')/conciertos
+    <nombre>{$nombre}</nombre>
+    <genero>{$genero}</genero>
+    <miembros>{$miembros}</miembros>
+    <fecha_concierto>{$fecha}</fecha_concierto>
+    <pais>{$pais}</pais>
+    </artista> into collection('registros_db')/conciertos
 XQ;
-                $session->execute($xquery);
-                $mensaje = "Concierto añadido correctamente.";
-            }
+            $session->execute($xquery);
+            $mensaje = "Concierto añadido correctamente.";
         }
 
         // Cerramos la sesión con la base de datos
@@ -73,6 +67,7 @@ XQ;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir concierto - TicketsNow</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -87,7 +82,7 @@ XQ;
         <input type="text" name="genero" id="genero" required><br>
 
         <label for="miembros">Miembros:</label>
-        <input type="text" name="miembros" id="miembros" required><br>
+        <input type="number" name="miembros" id="miembros" min="1" step="1" required><br>
 
         <label for="fecha">Fecha del concierto:</label>
         <input type="date" name="fecha" id="fecha" required><br>
@@ -97,7 +92,11 @@ XQ;
 
         <button type="submit">Añadir</button>
     </form>
+    
     <?php if (!empty($mensaje)) echo "<div class='mensaje'>" . $mensaje . "</div>"; ?>
+    
+    <div class="volver">
+        <a href="index.php">Volver al inicio</a>
+    </div>
 </body>
-
 </html>

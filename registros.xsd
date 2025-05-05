@@ -12,6 +12,7 @@
                             <xs:element name="fecha_concierto" type="xs:date" />
                             <xs:element name="pais" type="xs:string" />
                         </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="optional"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

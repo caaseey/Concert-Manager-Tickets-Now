@@ -1,103 +1,91 @@
 <?php
-require_once("BaseXClient/Session.php"); // Importamos la clase Session de BaseX
-
-// Inicializamos variable de mensaje
+require_once("BaseXClient/Session.php");
 $mensaje = "";
 
-// Comprobamos si se ha enviado el formulario y que todos los campos estén rellenos
-if (
-    $_SERVER['REQUEST_METHOD'] === 'POST'
-    && isset($_POST['nombre'], $_POST['nuevo_genero'], $_POST['nuevos_miembros'], $_POST['nueva_fecha'], $_POST['nuevo_pais'])
-    && $_POST['nombre'] !== ""
-    && $_POST['nuevo_genero'] !== ""
-    && $_POST['nuevos_miembros'] !== ""
-    && $_POST['nueva_fecha'] !== ""
-    && $_POST['nuevo_pais'] !== ""
-) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['id'])) {
+    $id = htmlspecialchars(trim($_POST['id']));
+    $updates = [];
 
-    // Sanitizamos entradas para evitar inyección de código o errores
-    $nombre = htmlspecialchars(trim($_POST['nombre']));
-    $nuevo_genero = htmlspecialchars(trim($_POST['nuevo_genero']));
-    $nuevos_miembros = htmlspecialchars(trim($_POST['nuevos_miembros']));
-    $nueva_fecha = htmlspecialchars(trim($_POST['nueva_fecha']));
-    $nuevo_pais = htmlspecialchars(trim($_POST['nuevo_pais']));
-
-    // Validamos que la fecha no sea anterior a hoy
-    $fecha_actual = date("Y-m-d");
-    if ($nueva_fecha < $fecha_actual) {
-        $mensaje = "La fecha del concierto no puede ser anterior a la fecha actual ($fecha_actual).";
-    } else {
-        try {
-            // Establecemos conexión con BaseX
-            $session = new BaseXClient\Session("localhost", 1984, "admin", "123");
-
-            // Comprobamos si el artista existe en la base de datos
-            $checkQuery = "xquery count(collection('registros_db')/conciertos/artista[nombre = '$nombre'])";
-            $existe = $session->execute($checkQuery);
-
-            // Si no existe ningún artista con ese nombre, mostramos error
-            if ((int)$existe === 0) {
-                $mensaje = "No existe ningún artista con el nombre '$nombre'.";
-            } else {
-                // Creamos una consulta XQuery para actualizar los valores del artista
-                $xquery = <<<XQ
-xquery (
-  replace value of node collection('registros_db')/conciertos/artista[nombre = '$nombre']/genero with '$nuevo_genero',
-  replace value of node collection('registros_db')/conciertos/artista[nombre = '$nombre']/miembros with '$nuevos_miembros',
-  replace value of node collection('registros_db')/conciertos/artista[nombre = '$nombre']/fecha_concierto with '$nueva_fecha',
-  replace value of node collection('registros_db')/conciertos/artista[nombre = '$nombre']/pais with '$nuevo_pais'
-)
-XQ;
-
-                // Ejecutamos la consulta
-                $session->execute($xquery);
-                $mensaje = "Concierto actualizado correctamente.";
-            }
-
-            // Cerramos la sesión con la base de datos
-            $session->close();
-        } catch (Exception $e) {
-            // Capturamos cualquier error relacionado con BaseX
-            $mensaje = "Error al actualizar: " . $e->getMessage();
+    if (!empty($_POST['nombre'])) {
+        $updates[] = "replace value of node collection('registros_db')/conciertos/artista[@id='$id']/nombre with '" . htmlspecialchars(trim($_POST['nombre'])) . "'";
+    }
+    if (!empty($_POST['genero'])) {
+        $updates[] = "replace value of node collection('registros_db')/conciertos/artista[@id='$id']/genero with '" . htmlspecialchars(trim($_POST['genero'])) . "'";
+    }
+    if (!empty($_POST['miembros'])) {
+        $updates[] = "replace value of node collection('registros_db')/conciertos/artista[@id='$id']/miembros with '" . htmlspecialchars(trim($_POST['miembros'])) . "'";
+    }
+    if (!empty($_POST['fecha'])) {
+        $fecha = htmlspecialchars(trim($_POST['fecha']));
+        if ($fecha < date("Y-m-d")) {
+            $mensaje = "La fecha no puede ser anterior a hoy.";
+        } else {
+            $updates[] = "replace value of node collection('registros_db')/conciertos/artista[@id='$id']/fecha_concierto with '$fecha'";
         }
     }
-} else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Si se envió el formulario pero hay campos vacíos
-    $mensaje = "Todos los campos son obligatorios. Por favor, rellena el formulario completo.";
+    if (!empty($_POST['pais'])) {
+        $updates[] = "replace value of node collection('registros_db')/conciertos/artista[@id='$id']/pais with '" . htmlspecialchars(trim($_POST['pais'])) . "'";
+    }
+
+    if (empty($mensaje) && !empty($updates)) {
+        try {
+            $session = new BaseXClient\Session("localhost", 1984, "admin", "1234");
+            $checkQuery = "xquery count(collection('registros_db')/conciertos/artista[@id='$id'])";
+            $existe = $session->execute($checkQuery);
+            if ((int)$existe === 0) {
+                $mensaje = "No existe ningún concierto con ID $id.";
+            } else {
+                $session->execute("xquery (" . implode(', ', $updates) . ")");
+                $mensaje = "Concierto actualizado correctamente.";
+            }
+            $session->close();
+        } catch (Exception $e) {
+            $mensaje = "Error: " . $e->getMessage();
+        }
+    } elseif (empty($updates)) {
+        $mensaje = "No se introdujo ningún cambio.";
+    }
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $mensaje = "El campo ID es obligatorio.";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar concierto - TicketsNow</title>
+    <title>Actualizar concierto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>Actualizar concierto</h1>
-    </header>
-    <form action="" method="post">
-        <label for="nombre">Nombre del artista a actualizar:</label>
-        <input type="text" name="nombre" id="nombre" required><br>
+    <header><h1>Actualizar concierto</h1></header>
 
-        <label for="nuevo_genero">Nuevo género:</label>
-        <input type="text" name="nuevo_genero" id="nuevo_genero" required><br>
+    <form method="post">
+        <label>ID del concierto:</label>
+        <input type="number" name="id" required><br>
 
-        <label for="nuevos_miembros">Nuevos miembros:</label>
-        <input type="text" name="nuevos_miembros" id="nuevos_miembros" required><br>
+        <label>Nuevo nombre:</label>
+        <input type="text" name="nombre"><br>
 
-        <label for="nueva_fecha">Nueva fecha del concierto:</label>
-        <input type="date" name="nueva_fecha" id="nueva_fecha" required><br>
+        <label>Nuevo género:</label>
+        <input type="text" name="genero"><br>
 
-        <label for="nuevo_pais">Nuevo país:</label>
-        <input type="text" name="nuevo_pais" id="nuevo_pais" required><br>
+        <label>Nuevos miembros:</label>
+        <input type="number" name="miembros" min="1"><br>
+
+        <label>Nueva fecha:</label>
+        <input type="date" name="fecha"><br>
+
+        <label>Nuevo país:</label>
+        <input type="text" name="pais"><br>
 
         <button type="submit">Actualizar</button>
     </form>
-    <?php if (!empty($mensaje)) echo "<div class='mensaje'>" . $mensaje . "</div>"; ?>
-</body>
 
+    <?php if ($mensaje) echo "<div class='mensaje'>$mensaje</div>"; ?>
+
+    <div class="volver">
+        <a href="index.php">Volver al inicio</a>
+    </div>
+</body>
 </html>

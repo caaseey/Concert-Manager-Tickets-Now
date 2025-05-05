@@ -1,0 +1,136 @@
+:root {
+    --bg-color: rgb(248, 247, 247);
+    --text-color: rgb(51, 51, 51);
+    --button-color: rgb(234, 234, 234);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background-color: var(--bg-color);
+}
+
+/* Titulo */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Boton de volver al inicio */
+.volver {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.volver a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.volver a:hover {
+    background-color: #dcdcdc;
+}
+
+
+
+/* Menu del index.php */
+.menu {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+/* Concierto carta */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(204, 204, 204);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.results {
+    margin-top: 2rem;
+}
+
+/* Formularios */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+/* Mensaje */
+.mensaje {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: rgb(139, 0, 0);
+}
+
+

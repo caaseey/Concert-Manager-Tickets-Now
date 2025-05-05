@@ -8,7 +8,7 @@ $mensaje = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre']) && trim($_POST['nombre']) !== '') {
     try {
         // Establecemos la conexión con el servidor BaseX
-        $session = new BaseXClient\Session("localhost", 1984, "admin", "123");
+        $session = new BaseXClient\Session("localhost", 1984, "admin", "1234");
 
         // Sanitizamos el nombre introducido para evitar errores o inyecciones
         $nombre = htmlspecialchars(trim($_POST['nombre']));
@@ -48,6 +48,7 @@ XQ;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar concierto - TicketsNow</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -59,7 +60,12 @@ XQ;
         <input type="text" name="nombre" id="nombre" required>
         <button type="submit">Eliminar</button>
     </form>
+
     <?php if (!empty($mensaje)) echo "<div class='mensaje'>" . $mensaje . "</div>"; ?>
+
+    <div class="volver">
+        <a href="index.php">Volver al inicio</a>
+    </div>
 </body>
 
 </html>
