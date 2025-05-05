@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+concerts.xsd
+
+Este archivo define el esquema XML para la estructura de la base de datos de conciertos del sistema "TicketsNow".
+
+Estructura principal:
+- Elemento raíz: <conciertos>
+  - Contiene uno o más elementos <artista>
+
+Cada <artista> debe tener los siguientes elementos hijos en orden:
+- <nombre>: Nombre del artista (texto)
+- <genero>: Género musical (texto)
+- <miembros>: Número de miembros (entero positivo)
+- <fecha_concierto>: Fecha del concierto (formato xs:date)
+- <pais>: País donde se realiza el concierto (texto)
+
+Atributo:
+- @id: Identificador numérico positivo único para cada artista (opcional)
+
+Este esquema garantiza la validez estructural de los documentos XML utilizados en la aplicación.
+-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="conciertos">
         <xs:complexType>

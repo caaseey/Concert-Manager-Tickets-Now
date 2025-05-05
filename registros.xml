@@ -1,4 +1,31 @@
-<conciertos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="registros.xsd">
+<conciertos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="registros.xsd">
+    <!--
+conciertos.xml
+
+Este archivo representa la base de datos XML para la aplicación "TicketsNow". 
+Contiene un listado estructurado de artistas musicales y sus conciertos, validado por el esquema
+    "registros.xsd".
+
+Estructura:
+- Raíz: <conciertos>
+  - Hijos: múltiples elementos <artista> con atributo obligatorio @id (único por artista)
+    - <nombre>: Nombre del artista o grupo
+    - <genero>: Género musical (ej. K-pop, Rap, Música Mexicana, etc.)
+    - <miembros>: Número de integrantes
+    - <fecha_concierto>: Fecha programada del concierto (formato ISO 8601)
+    - <pais>: País donde se llevará a cabo
+
+El archivo incluye artistas de diversos géneros:
+- K-pop
+- Rap / Hip-Hop
+- Música Mexicana
+- Reggaetón / Música Latina
+- Pop / Rock Internacional
+
+Este XML puede utilizarse como fuente para consultas XQuery, validación XSD o
+    inserciones/modificaciones desde PHP + BaseX.
+-->
     <!-- K-POP -->
     <artista id="1">
         <nombre>BTS</nombre>

@@ -1,3 +1,21 @@
+/* 
+styles.css
+
+Este archivo contiene los estilos principales para la interfaz del sistema "TicketsNow",
+que gestiona conciertos mediante una base de datos XML y BaseX.
+
+Estructura:
+- Variables CSS personalizadas para colores base
+- Estilos generales del body y tipografía
+- Diseño del header y título
+- Botón de "Volver al inicio"
+- Menú de navegación (index.php)
+- Tarjetas de concierto (resultados)
+- Formularios (insertar, actualizar, filtrar, borrar)
+- Estilo de mensajes de error o confirmación
+
+Se busca un diseño limpio, accesible y moderno, centrado en usabilidad y coherencia visual.
+*/
 :root {
     --bg-color: rgb(248, 247, 247);
     --text-color: rgb(51, 51, 51);

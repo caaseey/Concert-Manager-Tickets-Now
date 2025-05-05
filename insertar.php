@@ -1,4 +1,24 @@
 <?php
+/**
+ * insertar.php
+ *
+ * Este script permite añadir nuevos conciertos (artistas) a la base de datos XML 'registros_db' usando BaseX.
+ * El formulario solicita los siguientes campos: nombre, género, número de miembros, fecha del concierto y país.
+ *
+ * Funcionalidad:
+ * - Valida que todos los campos estén completos antes de insertar.
+ * - Sanitiza los datos para prevenir errores o ataques.
+ * - Verifica que la fecha del concierto no sea anterior a la fecha actual.
+ * - Inserta un nuevo nodo <artista> dentro del nodo raíz <conciertos>.
+ *
+ * Requisitos:
+ * - BaseX debe estar corriendo en localhost:1984.
+ * - Se necesita la clase BaseXClient\Session.php para establecer la conexión.
+ *
+ * Nota:
+ * - Actualmente no se comprueba si el nombre ya existe (aunque hay una consulta comentada para ello).
+ *   Puedes activar esa validación si deseas evitar duplicados.
+ */
 require_once(__DIR__ . "/BaseXClient/Session.php"); // Importamos la clase de conexión con BaseX
 
 // Inicializamos mensaje vacío

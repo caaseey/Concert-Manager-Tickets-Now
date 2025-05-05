@@ -1,3 +1,17 @@
+<!--
+index.php
+
+Este archivo actúa como página principal del sistema de gestión de conciertos "TicketsNow".
+Proporciona enlaces a las distintas funcionalidades disponibles:
+
+- Ver todos los conciertos registrados (lectura.php)
+- Filtrar un concierto por su ID (filtrar.php)
+- Añadir un nuevo concierto (insertar.php)
+- Actualizar información de un concierto existente (actualizar.php)
+- Eliminar un concierto por nombre o ID (borrar.php)
+
+La estructura es simple y sirve como punto de entrada para la navegación del sistema.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>

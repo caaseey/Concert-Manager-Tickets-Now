@@ -1,4 +1,20 @@
 <?php
+/**
+ * eliminar.php
+ *
+ * Este script permite eliminar un concierto (artista) de la base de datos XML 'registros_db' usando BaseX.
+ * El usuario debe introducir el nombre exacto del artista mediante un formulario HTML.
+ *
+ * Funcionalidad:
+ * - Verifica si el artista existe mediante una consulta `count(...)`.
+ * - Si existe, elimina el nodo correspondiente con una instrucción `delete node`.
+ * - Si no existe, muestra un mensaje informativo.
+ * - Se evita la ejecución si el campo está vacío y se sanitiza el input con `htmlspecialchars`.
+ *
+ * Requisitos:
+ * - El servidor BaseX debe estar activo en localhost:1984.
+ * - Es necesario tener la clase BaseXClient\Session.php disponible.
+ */
 require_once("BaseXClient/Session.php"); // Importamos la clase Session de BaseX
 
 // Inicializamos variable de mensaje

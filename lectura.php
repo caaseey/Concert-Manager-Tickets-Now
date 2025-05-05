@@ -1,4 +1,20 @@
 <?php
+/**
+ * lectura.php
+ *
+ * Este script recupera y muestra todos los conciertos (nodos <artista>) almacenados en la base de datos XML 'registros_db'
+ * mediante una consulta XQuery, mostrando cada uno como una tarjeta con formato HTML.
+ *
+ * Funcionalidad:
+ * - Se conecta al servidor BaseX y accede a la colección 'registros_db'.
+ * - Recorre todos los elementos <artista> dentro de <conciertos>.
+ * - Muestra su información: nombre, ID, género, número de miembros, fecha del concierto y país.
+ * - Cada concierto se presenta visualmente en una tarjeta HTML (div con clase 'card').
+ *
+ * Requisitos:
+ * - El servidor BaseX debe estar ejecutándose en localhost:1984.
+ * - Es necesaria la clase BaseXClient\Session.php para establecer la conexión con la base.
+ */
 require_once("BaseXClient/Session.php");
 
 try {

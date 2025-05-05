@@ -1,7 +1,23 @@
 <?php
-// filtrar.php
-// Este script permite buscar y mostrar conciertos por ID con diseño de tarjetas
-
+/**
+ * filtrar.php
+ *
+ * Este script permite buscar y visualizar información de un concierto (artista) almacenado en la base de datos XML
+ * 'registros_db' gestionada por BaseX, filtrando por su atributo 'id'.
+ *
+ * Funcionalidad:
+ * - El usuario introduce un ID a través de un formulario.
+ * - Si se encuentra un artista con ese ID, se muestra su información (nombre, género, miembros, fecha, país)
+ *   en formato HTML con diseño de tarjeta.
+ * - Si no se encuentra, se muestra un mensaje de advertencia.
+ *
+ * Seguridad:
+ * - El ID es sanitizado usando htmlspecialchars y trim.
+ *
+ * Requisitos:
+ * - El servidor BaseX debe estar activo en localhost:1984.
+ * - Se requiere la clase BaseXClient\Session.php para conectarse al servidor.
+ */
 require_once("BaseXClient/Session.php");
 
 $resultado = "";

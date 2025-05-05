@@ -1,4 +1,20 @@
 <?php
+/**
+ * actualizar.php
+ *
+ * Este script permite actualizar los datos de un concierto almacenado en una base de datos XML gestionada con BaseX.
+ * A través de un formulario HTML, el usuario puede modificar distintos campos de un artista/concierto (nombre, género,
+ * número de miembros, fecha del concierto y país), siempre que proporcione un ID válido.
+ *
+ * Validaciones implementadas:
+ * - El campo ID es obligatorio.
+ * - La fecha no puede ser anterior a la actual.
+ * - Solo se ejecutan actualizaciones para los campos no vacíos.
+ *
+ * Si el ID proporcionado no existe en la base XML 'registros_db', se muestra un mensaje de error.
+ *
+ * Requiere la clase BaseXClient\Session.php para conectarse al servidor BaseX.
+ */
 require_once("BaseXClient/Session.php");
 $mensaje = "";
 
