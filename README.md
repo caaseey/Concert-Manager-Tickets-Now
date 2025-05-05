@@ -15,14 +15,16 @@ Este proyecto es una aplicación web sencilla que permite gestionar conciertos m
 
 ## 📁 Estructura del Proyecto
 
-/BaseXClient/Session.php # Clase de conexión a BaseX
-/styles.css # Hoja de estilos CSS compartida
-/index.php # Página de menú principal
-/lectura.php # Muestra todos los conciertos
-/insertar.php # Añadir nuevo concierto
-/filtrar.php # Buscar concierto por ID
-/actualizar.php # Actualizar campos de un concierto por ID
-/borrar.php # Eliminar concierto por ID
+```
+/BaseXClient/Session.php   # Clase de conexión a BaseX
+/styles.css                # Hoja de estilos CSS compartida
+/index.php                 # Página de menú principal
+/lectura.php               # Muestra todos los conciertos
+/insertar.php              # Añadir nuevo concierto
+/filtrar.php               # Buscar concierto por ID
+/actualizar.php            # Actualizar campos de un concierto por ID
+/borrar.php                # Eliminar concierto por ID
+```
 
 ---
 
@@ -52,6 +54,7 @@ Permite modificar los datos de un artista indicando su ID.
 
 ### ❌ Borrar (`borrar.php`)
 Elimina un concierto de la base según el ID.
+
 ---
 
 ## ⚙️ Comandos Útiles para BaseX
@@ -63,6 +66,11 @@ basex -c "CREATE DB registros_db /ruta/completa/a/registros.xml"
 
 ### Exportar base de datos como XML
 ```bash
+basex -c "EXPORT registros_db /ruta/de/destino"
+```
+
+> Asegúrate de que BaseX esté ejecutándose en modo servidor (`basexhttp` o `basexserver`) si usas conexiones desde PHP.
+
 basex -c "EXPORT registros_db /ruta/de/destino"
 ```
 
